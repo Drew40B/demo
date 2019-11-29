@@ -1,0 +1,47 @@
+{
+    "name": "Drew Bentley",
+    "contact": {
+        "email": "<#email#>",
+        "git": "https://github.com/Drew40B/demo",
+        "linkedIn": "<#linkedIn#>"
+    },
+    
+    "skills": [
+        {"skill":"C#", "type":"language","years": 10},
+        {"skill":"Typescript", "type":"language","years": 2},
+        {"skill":"Javasctipt", "type":"language","years": 2},
+        {"skill":"SQL", "type":"language","years": 10},
+        {"skill":"MS SQL", "type":"database","years": 10},
+        {"skill":"MongoDB", "type":"database","years": 10},
+        {"skill":".net", "type":"frameowrk","years": 10},
+        {"skill":".net core", "type":"framework","years": 3},
+        {"skill":"NodeS", "type":"framework","years": 2},
+        {"skill":"ExpressJs", "type":"NodeJS Library","years": 10},
+        {"skill":"x/n unit", "type":"test framework","years": 10},
+        {"skill":"jest", "type":"test framework","years": 2},
+        {"skill":"RabbitMQ", "type":"Messaging","years": 2},
+        {"skill":"Azure Dev ops", "type":"build/deployment","years": 5},
+        {"skill":"Docker", "type":"containerization","years": 2},
+        {"skill":"Minikube", "type":"containerization","years": 2},
+        {"skill":"Kubernetese", "type":"containerization","years": 2},
+        {"skill":"REST", "type":"protocol","years": 2},
+        {"skill":"TLS", "type":"security","years": 1},
+        {"skill":"Certificates ", "type":"security","years": 1}
+        
+        
+        
+        
+    ],
+    "dataMap": {
+        "public": [
+            {
+                "key": "email",
+                "value": "someone@somewhere.com"
+            },
+            {
+                "key": "linkedIn",
+                "value": "https://www.linkedin.com/in/noone/"
+            }
+        ],
+        "private": []
+    }
