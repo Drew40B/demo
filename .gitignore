@@ -1,1 +1,5 @@
-rootCommon/private.pem
+# Python
+__pycache__
+
+# root Common
+rootCommon/employees
