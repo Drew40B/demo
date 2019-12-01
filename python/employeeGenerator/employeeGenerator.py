@@ -1,9 +1,19 @@
 #!/usr/bin/env python3
 """ Script to generate employees """
 
+# Add the utilities folder to the search path
+from pathlib import Path
+import os
+path = os.path.abspath(__file__)
+folder = os.path.dirname(path)
+utilitiesFolder = Path(folder).parent.joinpath("utilities")
+
+import sys
+sys.path.append(str(utilitiesFolder.resolve()))
+
+
 import requests
 import random
-from pathlib import Path
 import utilities
 import json
 
@@ -77,6 +87,7 @@ def generateOrg(vpCount: int, maxManagerRatio: int, maxWorkerRatio: int):
         count = random.randint(1, maxWorkerRatio)
         for x in range(count):
             employee = createEmployee("worker", manager)
+
 
 
 if __name__ == "__main__":
