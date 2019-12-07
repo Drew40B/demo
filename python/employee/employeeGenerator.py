@@ -2,21 +2,20 @@
 """ Script to generate employees """
 
 # Add the utilities folder to the search path
-from pathlib import Path
-import os
-path = os.path.abspath(__file__)
-folder = os.path.dirname(path)
-utilitiesFolder = Path(folder).parent.joinpath("utilities")
+# from pathlib import Path
+# import os
+# path = os.path.abspath(__file__)
+# folder = os.path.dirname(path)
+# utilitiesFolder = Path(folder).parent.joinpath("utilities")
 
-import sys
-sys.path.append(str(utilitiesFolder.resolve()))
+# import sys
+# sys.path.append(str(utilitiesFolder.resolve()))
 
 
-import requests
 import random
 import utilities
+import nameCreater
 import json
-
 
 class Employee:
 
@@ -36,15 +35,10 @@ class Employee:
         return " ".join(self.names)
 
 
-def createNames() -> [str]:
-    url = "https://uinames.com/api/"
-    r = requests.get(url=url)
-    result = r.json()
-    return [result["name"], result["surname"]]
 
 
 def createEmployee(role: str, supervisor: Employee) -> Employee:
-    names = createNames()
+    names = nameCreater.createName()
     employee = Employee(names, role, supervisor)
 
     if (supervisor == None):
