@@ -1,9 +1,10 @@
-# Resume
+# Demo
 This is a public regository to demonstrate my skills is various langugages and technologies.
 
-# Development environment / Toola
+# Development environment / Tools
 + Ubuntu 
 + Visual Studio Code
++ PyCharm
 + Git
 + Docker
 + Minikube

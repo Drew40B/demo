@@ -1,16 +1,17 @@
 #!/usr/bin/env python3
 from pathlib import Path
 
-def findCommonRoot() -> Path:
+
+def find_common_root() -> Path:
     path = Path.cwd()
 
-    testPath = path.joinpath("rootCommon")
-    if testPath.exists():
-        return testPath
+    test_path = path.joinpath("rootCommon")
+    if test_path.exists():
+        return test_path
 
     for parent in path.parents:
-        testPath = parent.joinpath("rootCommon")
-        if testPath.exists():
-            return testPath
+        test_path = parent.joinpath("rootCommon")
+        if test_path.exists():
+            return test_path
 
     raise Exception("Unable to find root common")
