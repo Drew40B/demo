@@ -2,46 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bdfe7cec-f137-454f-a7ec-807036071dd3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/demo.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/employee/employeegenerator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/venv/bin/activate" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/venv/bin/activate.csh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/venv/bin/activate.fish" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/venv/bin/python" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/venv/bin/python3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/venv/lib64" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/venv/pyvenv.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rootCommon/employees/Peyton Bergeron.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/employee/employeeGenerator.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/employee/nameCreater.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/employee/namecreater.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/employee/utilities.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/employee/utilities.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rootCommon/employees/Alejandro Serrano.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rootCommon/employees/Cosmin Urs.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rootCommon/employees/Dawson Gagné.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rootCommon/employees/Guillermo Maldonado.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rootCommon/employees/Irma Podkonický.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rootCommon/employees/Jozef Škultéty.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rootCommon/employees/Luke Price.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rootCommon/employees/Mustafa Avcı.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rootCommon/employees/Διόδοτος Διαμαντόπουλος.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rootCommon/employees/Ερμογένης Οικονόμου.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rootCommon/employees/Στέλλα Κυπραίος.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rootCommon/employees/贺 学.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/demo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/demo.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/employee/employeegenerator.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/employee/employeegenerator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/test/test_employee.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/test/test_employee.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rootCommon/employees/Tristan Brown.json" beforeDir="false" afterPath="$PROJECT_DIR$/rootCommon/employees/Tristan Brown.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Unit Test" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1VL8fm2YfCu4fBNjVpxBulZzVwp" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -51,9 +36,10 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
-  <component name="RunManager">
-    <configuration name="employeeGenerator" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.employeegenerator">
+    <configuration name="employeegenerator" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="demo" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -74,9 +60,69 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="Unittests for python.test.test_employee.GenerateLevel.test_generate_level_2_2" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="demo" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;python.test.test_employee.GenerateLevel.test_generate_level_2_2&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for python.test.test_employee.GenerateLevel.test_generate_level_2_2_second_index" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="demo" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;python.test.test_employee.GenerateLevel.test_generate_level_2_2_second_index&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests in test" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="demo" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/python/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/python/test&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests in test_employee.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="demo" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/python/test/test_employee.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.employeeGenerator" />
+        <item itemvalue="Python.employeegenerator" />
+        <item itemvalue="Python tests.Unittests in test_employee.py" />
+        <item itemvalue="Python tests.Unittests in test" />
+        <item itemvalue="Python tests.Unittests for python.test.test_employee.GenerateLevel.test_generate_level_2_2" />
+        <item itemvalue="Python tests.Unittests for python.test.test_employee.GenerateLevel.test_generate_level_2_2_second_index" />
       </list>
     </recent_temporary>
   </component>
@@ -103,57 +149,94 @@
       <option name="presentableId" value="Default" />
       <updated>1577021120736</updated>
     </task>
+    <task id="LOCAL-00001" summary="Refactored to python naming standards">
+      <created>1577023512430</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1577023512430</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Unit test working">
+      <created>1577034885430</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1577034885430</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Refactored to python naming standards" />
+    <MESSAGE value="Unit test working" />
+    <option name="LAST_COMMIT_MESSAGE" value="Unit test working" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="600" y="147" width="777" height="810" key="CommitChangelistDialog2" timestamp="1577023320174">
+    <state x="600" y="147" width="777" height="810" key="CommitChangelistDialog2" timestamp="1577449330179">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="600" y="147" width="777" height="810" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1577023320174" />
-    <state width="1057" height="466" key="DebuggerActiveHint" timestamp="1577022908039">
+    <state x="600" y="147" width="777" height="810" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1577449330179" />
+    <state width="1057" height="466" key="DebuggerActiveHint" timestamp="1577034235352">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1057" height="466" key="DebuggerActiveHint/67.27.1853.1053@67.27.1853.1053" timestamp="1577022908039" />
-    <state width="1830" height="278" key="GridCell.Tab.0.bottom" timestamp="1577023355614">
+    <state width="1057" height="466" key="DebuggerActiveHint/67.27.1853.1053@67.27.1853.1053" timestamp="1577034235352" />
+    <state width="1830" height="278" key="GridCell.Tab.0.bottom" timestamp="1577449289987">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1830" height="278" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1577023355614" />
-    <state width="1830" height="278" key="GridCell.Tab.0.center" timestamp="1577023355612">
+    <state width="1830" height="278" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1577449289987" />
+    <state width="1830" height="278" key="GridCell.Tab.0.center" timestamp="1577449289986">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1830" height="278" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1577023355612" />
-    <state width="1830" height="278" key="GridCell.Tab.0.left" timestamp="1577023355612">
+    <state width="1830" height="278" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1577449289986" />
+    <state width="1830" height="278" key="GridCell.Tab.0.left" timestamp="1577449289985">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1830" height="278" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1577023355612" />
-    <state width="1830" height="278" key="GridCell.Tab.0.right" timestamp="1577023355613">
+    <state width="1830" height="278" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1577449289985" />
+    <state width="1830" height="278" key="GridCell.Tab.0.right" timestamp="1577449289986">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1830" height="278" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1577023355613" />
-    <state width="1830" height="344" key="GridCell.Tab.1.bottom" timestamp="1577023154389">
+    <state width="1830" height="278" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1577449289986" />
+    <state width="1830" height="344" key="GridCell.Tab.1.bottom" timestamp="1577043251524">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1830" height="344" key="GridCell.Tab.1.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1577023154389" />
-    <state width="1830" height="344" key="GridCell.Tab.1.center" timestamp="1577023154387">
+    <state width="1830" height="344" key="GridCell.Tab.1.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1577043251524" />
+    <state width="1830" height="344" key="GridCell.Tab.1.center" timestamp="1577043251524">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1830" height="344" key="GridCell.Tab.1.center/67.27.1853.1053@67.27.1853.1053" timestamp="1577023154387" />
-    <state width="1830" height="344" key="GridCell.Tab.1.left" timestamp="1577023154386">
+    <state width="1830" height="344" key="GridCell.Tab.1.center/67.27.1853.1053@67.27.1853.1053" timestamp="1577043251524" />
+    <state width="1830" height="344" key="GridCell.Tab.1.left" timestamp="1577043251523">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1830" height="344" key="GridCell.Tab.1.left/67.27.1853.1053@67.27.1853.1053" timestamp="1577023154386" />
-    <state width="1830" height="344" key="GridCell.Tab.1.right" timestamp="1577023154388">
+    <state width="1830" height="344" key="GridCell.Tab.1.left/67.27.1853.1053@67.27.1853.1053" timestamp="1577043251523" />
+    <state width="1830" height="344" key="GridCell.Tab.1.right" timestamp="1577043251524">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1830" height="344" key="GridCell.Tab.1.right/67.27.1853.1053@67.27.1853.1053" timestamp="1577023154388" />
+    <state width="1830" height="344" key="GridCell.Tab.1.right/67.27.1853.1053@67.27.1853.1053" timestamp="1577043251524" />
+    <state x="482" y="187" key="SettingsEditor" timestamp="1577027365450">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="482" y="187" key="SettingsEditor/67.27.1853.1053@67.27.1853.1053" timestamp="1577027365450" />
+    <state x="649" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1577448953646">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="649" y="380" key="com.intellij.ide.util.TipDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1577448953646" />
+    <state x="543" y="291" width="890" height="522" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1577039578549">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="543" y="291" width="890" height="522" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/67.27.1853.1053@67.27.1853.1053" timestamp="1577039578549" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/python/employee/employeegenerator.py</url>
-          <line>105</line>
-          <option name="timeStamp" value="1" />
+          <url>file://$PROJECT_DIR$/python/test/test_employee.py</url>
+          <line>59</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/python/test/test_employee.py</url>
+          <line>101</line>
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

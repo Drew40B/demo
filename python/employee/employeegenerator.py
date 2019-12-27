@@ -53,7 +53,29 @@ def save_employee(employee: Employee):
         json.dump(employee.__dict__, file)
 
 
-def generateOrg2(company_name, *level_counts):
+def generate_level(supervisor, level_counts, index):
+    result = []
+    count = level_counts[index]
+    role = roles[index]
+
+    index = index + 1
+    for x in range(count):
+        employee = create_employee(role, supervisor)
+        result.append(employee)
+
+        if index < len(level_counts):
+            generate_level(employee, level_counts, index)
+
+    return result
+
+
+def generate_org(company_name, *level_counts):
+    """Generates a company hierarchy where the company name is the root.
+
+    Args:
+        company_name: Name of the company
+        level_counts: Array of numbers to generate each level with. Example 1,2 will generate 1 CIO with 2 Senior vps
+    """
     global roles
 
     level_counts = list(level_counts)
@@ -63,44 +85,8 @@ def generateOrg2(company_name, *level_counts):
 
     company_root = Employee([company_name], "Company", None)
 
-    generate_level(company_root, roles, level_counts, 0)
-
-
-def generate_level(supervisor, roles, levelCounts, index):
-    result = []
-    count = levelCounts[index]
-    role = roles[index]
-
-    index = index + 1
-    for x in range(count):
-        employee = create_employee(role, supervisor)
-        result.append(employee)
-
-        if index < len(levelCounts):
-            generate_level(employee, roles, levelCounts, index)
-
-    return result
-
-
-def generate_org(vp_count: int, max_manager_ratio: int, max_worker_ratio: int):
-    vp = create_employee("VP", None)
-
-    # Generate Mangers
-    managers = []
-    count = random.randint(1, max_manager_ratio)
-
-    for x in range(count):
-        employee = create_employee("manager", vp)
-        managers.append(employee)
-
-    # Generate workers
-
-    for manager in managers:
-        count = random.randint(1, max_worker_ratio)
-        for x in range(count):
-            employee = create_employee("worker", manager)
+    generate_level(company_root, level_counts, 0)
 
 
 if __name__ == "__main__":
-    # generateOrg(1, 3, 3)
-    generateOrg2("My Company", 2, 3, 4)
+    generate_org("My Company", 2, 3, 4)
