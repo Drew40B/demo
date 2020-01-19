@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bdfe7cec-f137-454f-a7ec-807036071dd3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/demo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/demo.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -32,9 +34,9 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.employeegenerator">
+  <component name="RunManager" selected="Python tests.Unittests in test_employee.py">
     <configuration name="employeegenerator" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="demo" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -56,6 +58,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="test_employee" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="demo" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/python/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python/test/test_employee.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Unittests for python.test.test_employee.GenerateLevel.test_generate_level_2_2" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="demo" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -67,20 +90,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;python.test.test_employee.GenerateLevel.test_generate_level_2_2&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Unittests for python.test.test_employee.GenerateLevel.test_generate_level_2_2_second_index" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="demo" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;python.test.test_employee.GenerateLevel.test_generate_level_2_2_second_index&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -114,11 +123,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.employeegenerator" />
         <item itemvalue="Python tests.Unittests in test_employee.py" />
+        <item itemvalue="Python.test_employee" />
+        <item itemvalue="Python.employeegenerator" />
         <item itemvalue="Python tests.Unittests in test" />
         <item itemvalue="Python tests.Unittests for python.test.test_employee.GenerateLevel.test_generate_level_2_2" />
-        <item itemvalue="Python tests.Unittests for python.test.test_employee.GenerateLevel.test_generate_level_2_2_second_index" />
       </list>
     </recent_temporary>
   </component>
@@ -183,6 +192,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="Unit test working. Regenerated employees" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="667" y="159" width="642" height="787" key="#test_employee" timestamp="1579458293784">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="667" y="159" width="642" height="787" key="#test_employee/67.27.1853.1053@67.27.1853.1053" timestamp="1579458293784" />
     <state x="600" y="147" width="777" height="810" key="CommitChangelistDialog2" timestamp="1577449383439">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -191,22 +204,22 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state width="1057" height="466" key="DebuggerActiveHint/67.27.1853.1053@67.27.1853.1053" timestamp="1577034235352" />
-    <state width="1830" height="278" key="GridCell.Tab.0.bottom" timestamp="1577450450160">
+    <state width="1830" height="278" key="GridCell.Tab.0.bottom" timestamp="1579458543226">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1830" height="278" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1577450450160" />
-    <state width="1830" height="278" key="GridCell.Tab.0.center" timestamp="1577450450159">
+    <state width="1830" height="278" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1579458543226" />
+    <state width="1830" height="278" key="GridCell.Tab.0.center" timestamp="1579458543226">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1830" height="278" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1577450450159" />
-    <state width="1830" height="278" key="GridCell.Tab.0.left" timestamp="1577450450159">
+    <state width="1830" height="278" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1579458543226" />
+    <state width="1830" height="278" key="GridCell.Tab.0.left" timestamp="1579458543225">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1830" height="278" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1577450450159" />
-    <state width="1830" height="278" key="GridCell.Tab.0.right" timestamp="1577450450160">
+    <state width="1830" height="278" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1579458543225" />
+    <state width="1830" height="278" key="GridCell.Tab.0.right" timestamp="1579458543226">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1830" height="278" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1577450450160" />
+    <state width="1830" height="278" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1579458543226" />
     <state width="1830" height="344" key="GridCell.Tab.1.bottom" timestamp="1577043251524">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -223,14 +236,14 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state width="1830" height="344" key="GridCell.Tab.1.right/67.27.1853.1053@67.27.1853.1053" timestamp="1577043251524" />
-    <state x="482" y="187" key="SettingsEditor" timestamp="1577027365450">
+    <state x="482" y="187" key="SettingsEditor" timestamp="1579458482245">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="482" y="187" key="SettingsEditor/67.27.1853.1053@67.27.1853.1053" timestamp="1577027365450" />
-    <state x="649" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1577448953646">
+    <state x="482" y="187" key="SettingsEditor/67.27.1853.1053@67.27.1853.1053" timestamp="1579458482245" />
+    <state x="649" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1579458271701">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="649" y="380" key="com.intellij.ide.util.TipDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1577448953646" />
+    <state x="649" y="380" key="com.intellij.ide.util.TipDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1579458271701" />
     <state x="543" y="291" width="890" height="522" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1577039578549">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
