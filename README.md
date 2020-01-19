@@ -1,4 +1,4 @@
-# Resume
+# Demo
 This is a public regository to demonstrate my skills is various langugages and technologies.
 
 # Development environment / Toola
