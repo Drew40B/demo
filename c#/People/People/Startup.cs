@@ -10,6 +10,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using People.Interfaces;
+using People.Lib;
 
 namespace People
 {
@@ -26,6 +28,13 @@ namespace People
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            // Add EmployeeDatabase to services (DI)
+            var db = new EmployeeDatabase();
+               services.AddSingleton<IEmployeeDatabase>(db);
+
+            services.AddHostedService<DatabaseiInitializerService>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -35,6 +44,7 @@ namespace People
             {
                 app.UseDeveloperExceptionPage();
             }
+
 
             app.UseHttpsRedirection();
 

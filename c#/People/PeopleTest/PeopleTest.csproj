@@ -17,4 +17,10 @@
     <ProjectReference Include="..\People\People.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="dataFiles\sampleEmployee.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
