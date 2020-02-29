@@ -4,3 +4,5 @@ __pycache__
 # C#
 /c#/People/.vs/People
 **/bin/
+**/obj/
+/c#/Employees/.vs/Employees
