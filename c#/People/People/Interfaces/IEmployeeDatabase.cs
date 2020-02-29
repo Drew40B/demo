@@ -6,10 +6,12 @@ using People.Model;
 
 namespace People.Interfaces
 {
-    interface IEmployeeDatabase
+   public  interface IEmployeeDatabase
     {
          Task<Employee> findById(int empoloyeeId);
 
+        Task<Employee> findRoot();
+      
         Task Init();
     }
 }

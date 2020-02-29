@@ -34,9 +34,9 @@ namespace People.Lib
 
             var files = dir.GetFiles("*.json");
 
-            foreach( FileInfo file in files)
+            foreach (FileInfo file in files)
             {
-                using ( FileStream fs = File.OpenRead(file.FullName))
+                using (FileStream fs = File.OpenRead(file.FullName))
                 {
                     var employee = await deserializeEmployee(fs);
                     _employees.Add(employee.EmployeeId, employee);
@@ -52,11 +52,19 @@ namespace People.Lib
             return employee;
         }
 
-        #pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
+
+#pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
         public async Task<Employee> findById(int empoloyeeId)
-        #pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
+#pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
         {
             return this._employees?.GetValueOrDefault(empoloyeeId);
+        }
+
+#pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
+        public async Task<Employee> findRoot()
+#pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
+        {
+            return _employees.FirstOrDefault(kvp => kvp.Value.SupervisorId == 0).Value;
         }
     }
 }
