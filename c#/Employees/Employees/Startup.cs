@@ -1,18 +1,11 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Employees.Interfaces;
 using Employees.Database;
 using Employees.DataService;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
 using Employees.Lib;
 
@@ -50,7 +43,24 @@ namespace Employees
                 services.AddHostedService<DatabaseiInitializerService>();
             }
 
-        
+            // Swagger
+            services.AddSwaggerDocument(config =>
+            {
+                config.PostProcess = document =>
+                {
+                    document.Info.Version = "v1";
+                    document.Info.Title = "Employees API";
+                    document.Info.Description = "A RESTful microservice to manage employees";
+                    document.Info.TermsOfService = "None";
+                    document.Info.Contact = new NSwag.OpenApiContact
+                    {
+                        Name = "Drew Bentley",
+                        Email = string.Empty,
+                      
+                    };
+                  
+                };
+            });
 
 
         }
@@ -63,7 +73,13 @@ namespace Employees
                 app.UseDeveloperExceptionPage();
             }
 
+           
+
             app.UseHttpsRedirection();
+
+            // Register the Swagger generator and the Swagger UI middlewares
+            app.UseOpenApi();
+            app.UseSwaggerUi3();
 
             app.UseRouting();
 
