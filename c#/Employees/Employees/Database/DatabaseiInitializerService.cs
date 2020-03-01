@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace Employees.Database
 {
+    /// <summary>
+    /// Used to initialize the JsonEmployeeService
+    /// </summary>
     public class DatabaseiInitializerService : IHostedService
     {
 

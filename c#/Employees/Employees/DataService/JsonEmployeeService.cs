@@ -12,6 +12,10 @@ using System.Text.Json.Serialization;
 namespace Employees.DataService
 
 {
+    /// <summary>
+    /// Sample class showing an alternative to Entity framework. 
+    /// Note: I have done a minimal implementation to prove that it works
+    /// </summary>
     public class JsonEmployeeService : IEmployeeService
     {
 
