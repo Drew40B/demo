@@ -5,7 +5,7 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Employees.Lib
+namespace Employees.Database
 {
     public class DatabaseiInitializerService : IHostedService
     {
@@ -19,7 +19,7 @@ namespace Employees.Lib
 
         public async Task StartAsync(CancellationToken cancellationToken)
         {
-            var db = this._provider.GetService<IEmployeeDatabase>();
+            var db = this._provider.GetService<IEmployeeService>();
             await db.Init();
         }
 

@@ -13,25 +13,79 @@ namespace Employees.Controllers
     [ApiController]
     public class EmployeeController : ControllerBase
     {
-        private IEmployeeDatabase _employees;
+        private IEmployeeService _employees;
 
-        public EmployeeController(IEmployeeDatabase employeeDatabase)
+        public EmployeeController(IEmployeeService employeeDatabase)
         {
             _employees = employeeDatabase;
         }
 
-
         [HttpGet]
-        public async Task<Employee> Get(int? employeeId = null)
+        [Route("")]
+        public async Task<Employee[]> List()
         {
-            if (employeeId is null)
+            return await _employees.List();
+        }
+        [HttpGet]
+        [Route("{employeeId}")]
+        public async Task<IActionResult> Get(int employeeId)
+        {
+
+            var found = await _employees.FindById((int)employeeId);
+
+            if (found == null)
             {
-                return await _employees.findRoot();
+                return NotFound();
             }
 
-            return await _employees.findById((int) employeeId);
+            return Ok(found);
+
         }
 
+        [HttpPost]
+        public async Task<IActionResult> Create(Employee employee)
+        {
+            var result = await _employees.Create(employee);
+            return CreatedAtRoute(result.EmployeeId, result);
 
+        }
+
+        [HttpPut]
+        [Route("{employeeId}")]
+        public async Task<IActionResult> Update(int employeeId, Employee employee)
+        {
+            if (employeeId != employee.EmployeeId)
+            {
+                return Conflict(new ConflictMessage() { Message = "Employeeid missmatch. Body does not match uri", Uri = employeeId, Body = employee.EmployeeId });
+            }
+
+        
+            var result = await _employees.Update(employee);
+
+            if (result.Exists)
+            {
+                return Ok(result.Employee);
+            } else
+            {
+                return NotFound();
+            }
+
+        }
+
+        [HttpDelete]
+        [Route("{employeeId}")]
+        public async Task<IActionResult> Delete(int employeeId)
+        {
+            await _employees.Delete(employeeId);
+
+            return Ok();
+
+        }
+        private class ConflictMessage
+        {
+            public string Message { get; set; }
+            public int Uri { get; set; }
+            public int Body { get; set; }
+        }
     }
 }

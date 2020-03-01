@@ -5,12 +5,14 @@ using System.Linq;
 using System.Threading.Tasks;
 using Employees.Interfaces;
 using Employees.Model;
+using Employees.Lib;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace Employees.Lib
+namespace Employees.DataService
+
 {
-    public class EmployeeDatabase : IEmployeeDatabase
+    public class JsonEmployeeService : IEmployeeService
     {
 
         const string EMPLOYEES_DIR = "employees";
@@ -54,7 +56,7 @@ namespace Employees.Lib
 
 
 #pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
-        public async Task<Employee> findById(int empoloyeeId)
+        public async Task<Employee> FindById(int empoloyeeId)
 #pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
         {
             return this._employees?.GetValueOrDefault(empoloyeeId);
@@ -65,6 +67,26 @@ namespace Employees.Lib
 #pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
         {
             return _employees.FirstOrDefault(kvp => kvp.Value.SupervisorId == 0).Value;
+        }
+
+        public Task<Employee[]> List()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<Employee> Create(Employee empoloyee)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<(bool Exists, Employee Employee)> Update(Employee employee)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> Delete(int employeeId)
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Employees.Interfaces;
-using Employees.Lib;
+using Employees.Database;
+using Employees.DataService;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -12,6 +13,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.EntityFrameworkCore;
+using Employees.Lib;
 
 namespace Employees
 {
@@ -30,10 +33,26 @@ namespace Employees
             services.AddControllers();
 
             // Add EmployeeDatabase to services (DI)
-            var db = new EmployeeDatabase();
-            services.AddSingleton<IEmployeeDatabase>(db);
 
-            services.AddHostedService<DatabaseiInitializerService>();
+            var config = this.Configuration.GetSection("Employee").Get<EmployeeConfig>();
+
+            services.AddDbContext<EmployeeDbContext>(options => options.UseInMemoryDatabase(databaseName: "Employees"));
+
+            if (config.UseInMemoryDb)
+            {
+                services.AddScoped<IEmployeeService, EmployeeService>();
+
+            }
+            else
+            {
+                var db = new JsonEmployeeService();
+                services.AddSingleton<IEmployeeService>(db);
+                services.AddHostedService<DatabaseiInitializerService>();
+            }
+
+        
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
