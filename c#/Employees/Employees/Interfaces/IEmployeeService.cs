@@ -12,7 +12,7 @@ namespace Employees.Interfaces
 
         Task<Employee> FindById(int empoloyeeId);
 
-        Task<Employee> findRoot();
+        Task<Employee> FindRoot();
 
         Task<Employee> Create(Employee empoloyee);
 

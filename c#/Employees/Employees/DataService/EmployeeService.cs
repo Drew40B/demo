@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Employees.Database;
 using Employees.Interfaces;
 using Employees.Model;
@@ -16,17 +13,14 @@ namespace Employees.DataService
         public EmployeeService(EmployeeDbContext context)
         {
             _context = context;
-
         }
-
-
 
         public async Task<Employee> FindById(int empoloyeeId)
         {
             return await _context.Employee.FirstOrDefaultAsync(e => e.EmployeeId == empoloyeeId);
         }
 
-        public async Task<Employee> findRoot()
+        public async Task<Employee> FindRoot()
         {
             return await _context.Employee.AsQueryable().FirstOrDefaultAsync(e => e.SupervisorId == 0);
 
@@ -49,14 +43,11 @@ namespace Employees.DataService
 
         public async Task<(bool Exists, Employee Employee)> Update(Employee employee)
         {
-
-               
             if (! await Exists(employee.EmployeeId))
             {
                 return (Exists: false, Employee: null);
             }
 
-          
             var result = _context.Employee.Update(employee);
             await _context.SaveChangesAsync();
 

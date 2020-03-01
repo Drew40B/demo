@@ -63,7 +63,7 @@ namespace Employees.DataService
         }
 
 #pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
-        public async Task<Employee> findRoot()
+        public async Task<Employee> FindRoot()
 #pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
         {
             return _employees.FirstOrDefault(kvp => kvp.Value.SupervisorId == 0).Value;
