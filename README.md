@@ -3,20 +3,21 @@ This is a public regository to demonstrate my skills is various langugages and t
 
 # Development environment / Tools
 + Ubuntu 
++ Windows
 + Visual Studio Code
++ Visual Studio 2019
 + PyCharm
 + Git
-+ Docker
-+ Minikube
 
 # Technologies
-+ NodeJs / Typescript
++ NodeJs / Typescript (future)
 + .net / C#
 + python
-+ Docker / Kubernetes
++ Docker / Kubernetes (future)
 
 # Folder Structure
 - rootCommon : common assets to all
 - {technology} : Demo of a specific technology
-   - dist: Built assets for distribution
-   - src: Source code
+- python : Python scripts to generate employees into the common folder
+- C# : Sample RESTful microservice with unit test.
+  
