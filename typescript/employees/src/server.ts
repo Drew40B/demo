@@ -1,22 +1,6 @@
-import errorHandler from "errorhandler";
-
 import app from "./app";
+//import { PORT } from "./constants/pokeApi.constants";
 
-/**
- * Error Handler. Provides full stack - remove for production
- */
-app.use(errorHandler());
+const PORT = 3000;
 
-/**
- * Start Express server.
- */
-const server = app.listen(app.get("port"), () => {
-    console.log(
-        "  App is running at http://localhost:%d in %s mode",
-        app.get("port"),
-        app.get("env")
-    );
-    console.log("  Press CTRL-C to stop\n");
-});
-
-export default server;
+app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
