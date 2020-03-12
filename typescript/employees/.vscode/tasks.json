@@ -10,6 +10,12 @@
                 "kind": "build",
                 "isDefault": true
             }
+        },
+        {
+            "type": "npm",
+            "script": "test",
+            "group": "test",
+            "problemMatcher": []
         }
     ]
 }
