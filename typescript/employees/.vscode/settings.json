@@ -22,5 +22,6 @@
   },
   "typescript.referencesCodeLens.enabled": true,
   "appService.zipIgnorePattern": [".vscode{,/**}"],
-  "appService.deploySubpath": ""
+  "appService.deploySubpath": "",
+  "window.title": "Employees ${dirty}${activeEditorShort}${separator}${rootName}${separator}${appName}"
 }
