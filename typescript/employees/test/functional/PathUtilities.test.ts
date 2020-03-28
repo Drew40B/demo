@@ -1,5 +1,5 @@
 
-import { PathUtilities } from "../src/utils";
+import { PathUtilities } from "../../src/util";
 import path from "path";
 import fs from "fs";
 describe("PathUtilities", () => {
@@ -7,13 +7,13 @@ describe("PathUtilities", () => {
 
         it("happy path", async (done) => {
 
-           const rootPath = await PathUtilities.findRootCommon();
+            const rootPath = await PathUtilities.findRootCommon();
 
-           expect(rootPath).not.toBeNull();
-           expect( fs.existsSync(rootPath)).toBe(true);
-           expect(path.basename(rootPath)).toBe(PathUtilities.ROOT_FOLDER_NAME);
+            expect(rootPath).not.toBeNull();
+            expect(fs.existsSync(rootPath)).toBe(true);
+            expect(path.basename(rootPath)).toBe(PathUtilities.ROOT_FOLDER_NAME);
 
-        done();
+            done();
 
         });
 
@@ -21,12 +21,12 @@ describe("PathUtilities", () => {
 
             const start = path.parse(__dirname).root;
             const rootPath = await PathUtilities.findRootCommon(start);
- 
+
             expect(rootPath).toBeNull();
-        
-         done();
- 
-         });
+
+            done();
+
+        });
     });
 
 });
