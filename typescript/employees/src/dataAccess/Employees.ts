@@ -3,6 +3,7 @@ import path from "path";
 import fs from "fs";
 
 import { Employee } from "../model";
+import e from "express";
 
 
 /**
@@ -86,5 +87,27 @@ export class Employees {
 
         const found = this._database.get(employeeId);
         return found ? found : null;
+    }
+
+    /**
+     * Persist the employee. id property will be assigned
+     * @param employee  employee to be save
+     * @returns newly created employee with it's corresponding id set.
+     */
+    public async create(employee: Employee): Promise<Employee> {
+
+        let id = this._database.size;
+
+        // ensure the id is available.
+        // In a real database scenario we would allow the database to assign the id.
+        while(this._database.get(id)){
+            id++;
+        }
+
+        employee.id = id;
+
+        this._database.set(id,employee);
+
+        return employee;
     }
 }
