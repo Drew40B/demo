@@ -1,9 +1,10 @@
 import { PathUtilities } from "../util/PathUtilities";
 import path from "path";
 import fs from "fs";
+import { WriteResult } from "./WriteResult";
 
 import { Employee } from "../model";
-import e from "express";
+
 
 
 /**
@@ -100,14 +101,28 @@ export class Employees {
 
         // ensure the id is available.
         // In a real database scenario we would allow the database to assign the id.
-        while(this._database.get(id)){
+        while (this._database.get(id)) {
             id++;
         }
 
         employee.id = id;
 
-        this._database.set(id,employee);
+        this._database.set(id, employee);
 
         return employee;
+    }
+
+    public async update(employee: Employee): Promise<{ result: WriteResult; employee: Employee }> {
+
+        const found = await this.findById(employee.id);
+
+        if (!found) {
+            return { result: WriteResult.notFound, employee: null };
+        }
+
+        this._database.set(employee.id, employee);
+
+        return { result: WriteResult.success, employee: employee };
+
     }
 }

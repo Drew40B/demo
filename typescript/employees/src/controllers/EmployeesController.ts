@@ -1,4 +1,4 @@
-import { Employees } from "../dataAccess";
+import { Employees, WriteResult } from "../dataAccess";
 import { Request, Response } from "express";
 import { Employee } from "../model";
 
@@ -39,6 +39,25 @@ export class EmployeesController {
 
         res.status(201).json(result);
 
+    }
+
+    public async update(req: Request, res: Response) {
+      
+        const employee: Employee = req.body;
+
+        const result = await this._employees.update(employee);
+
+        switch (result.result) {
+            case WriteResult.success:
+                res.status(200).json(result.employee);
+                break;
+            case WriteResult.notFound:
+                res.sendStatus(404);
+                break;
+            default:
+                res.send(500).json({ message: "update operation failed" });
+
+        }
     }
 
 }

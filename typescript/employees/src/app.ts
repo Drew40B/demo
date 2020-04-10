@@ -26,6 +26,7 @@ export async function init() {
     app.get("/", controller.list.bind(controller));
     app.get("/:employeeId", controller.getById.bind(controller));
 
+    app.put("/",controller.update.bind(controller));
     app.post("/",controller.create.bind(controller));
     
     console.log("initialized");

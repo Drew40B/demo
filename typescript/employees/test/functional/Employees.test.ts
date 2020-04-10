@@ -1,8 +1,7 @@
 import { Employees } from "../../src/dataAccess/Employees";
-import { PathUtilities } from "../../src/util/PathUtilities";
-import { pathToFileURL } from "url";
-import path from "path";
+
 import { Employee } from "../../src/model";
+import { WriteResult } from "../../src/dataAccess";
 
 beforeEach(async () => {
     // Reset employees so tests to bleed into each other
@@ -61,12 +60,13 @@ describe("Employees", () => {
 
             const employees = await Employees.instance();
 
-            const employee: Employee = { 
-                names : ["Unit","Test"],
-                role: "test",
-                id : -1,
-                supervisorId : 0
-             };
+            const employee: Employee = new Employee();
+             
+            employee.names = ["Unit", "Test"];
+            employee.role = "test";
+            employee.id = -1,
+            employee.supervisorId =0;
+          
 
             let result = await employees.create(employee);
 
@@ -76,7 +76,25 @@ describe("Employees", () => {
             // Verify saved in database
             result = await employees.findById(result.id);
             expect(result).not.toBeNull();
-  
+
+            done();
+        });
+    });
+
+    describe("update", () => {
+        it("happy path", async (done) => {
+
+            const employees = await Employees.instance();
+
+            const employee = await employees.findById(1);
+
+            employee.names.push("updated");
+
+            const result = await employees.update(employee);
+
+            expect(result.result).toBe(WriteResult.success);
+            expect(result.employee.names.findIndex(n => n === "updated")).toBeGreaterThanOrEqual(-1);
+
             done();
         });
     });

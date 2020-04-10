@@ -36,9 +36,6 @@ export class EmployeeValidator {
         }
     }
 
-    constructor() {
-
-    }
 
     public parseAndValidate(object: unknown): ValidationResult<Employee> {
 

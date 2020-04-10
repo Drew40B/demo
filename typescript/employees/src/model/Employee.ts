@@ -3,4 +3,5 @@ export class Employee {
     names: string[];
     role: string;
     supervisorId: number;
-}
+
+  }
