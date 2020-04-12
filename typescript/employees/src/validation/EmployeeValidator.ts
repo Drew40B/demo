@@ -1,7 +1,9 @@
 
 import Ajv from "ajv";
-import { Employee } from "../model";
+import { EmployeeModel, ErrorModel } from "../model";
 import { ValidationResult } from "../validation/ValidationResult";
+import { Request, Response, NextFunction } from "express";
+
 
 export class EmployeeValidator {
 
@@ -36,16 +38,50 @@ export class EmployeeValidator {
         }
     }
 
+    /**
+     * Express handler that validates and parses the request body. If parse passes req.body is set to the parsed employee
+     * @param req  Express Request object
+     * @param res  Express Response object
+     * @param next next function to call upon success,
+     */
+    public handle(req: Request, res: Response, next: NextFunction) {
 
-    public parseAndValidate(object: unknown): ValidationResult<Employee> {
+        const parseResult = this.parseAndValidate(req.body);
+
+        if (!parseResult.success) {
+            const error: ErrorModel = {
+                message: "Error during validation",
+                errors: parseResult.errors,
+            };
+
+            res.status(400).json(error);
+            return;
+        }
+
+        if (req.method === "PUT" && parseInt(req.params.employeeId) !== parseResult.object.id) {
+            const error: ErrorModel = {
+                message: `Conflict: Employeeid does not match ${req.params.employeeId} / ${parseResult.object.id} (path/body)`
+
+            };
+            res.status(409).json(error);
+        }
+
+        req.body = parseResult.object;
+
+
+        next();
+
+    }
+
+    public parseAndValidate(object: unknown): ValidationResult<EmployeeModel> {
 
         const ajv = new Ajv(); // options can be passed, e.g. {allErrors: true}
         const validate = ajv.compile(this.schema);
 
-        const result = new ValidationResult<Employee>();
+        const result = new ValidationResult<EmployeeModel>();
 
         if (!validate(object)) {
-         
+
             result.success = false;
             result.errors = [];
 
@@ -57,7 +93,7 @@ export class EmployeeValidator {
 
         }
 
-        result.object = object as Employee;
+        result.object = object as EmployeeModel;
         result.success = true;
 
         // TODO add custom validation here

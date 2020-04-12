@@ -3,7 +3,7 @@ import path from "path";
 import fs from "fs";
 import { WriteResult } from "./WriteResult";
 
-import { Employee } from "../model";
+import { EmployeeModel } from "../model";
 
 
 
@@ -13,10 +13,10 @@ import { Employee } from "../model";
 export class Employees {
 
     private static _instance: Employees;
-    private _database: Map<number, Employee>;
+    private _database: Map<number, EmployeeModel>;
 
     constructor() {
-        this._database = new Map<number, Employee>();
+        this._database = new Map<number, EmployeeModel>();
     }
 
     public static async instance(): Promise<Employees> {
@@ -59,7 +59,7 @@ export class Employees {
         for (const file of files) {
             const filePath = path.join(employeesFolder, file);
             const contents = await fs.promises.readFile(filePath);
-            const employee: Employee = JSON.parse(contents.toString());
+            const employee: EmployeeModel = JSON.parse(contents.toString());
 
             employees._database.set(employee.id, employee);
         }
@@ -72,9 +72,9 @@ export class Employees {
     /**
      * List all employees
      */
-    public async list(): Promise<Employee[]> {
+    public async list(): Promise<EmployeeModel[]> {
 
-        const result: Employee[] = [];
+        const result: EmployeeModel[] = [];
 
         this._database.forEach(e => result.push(e));
 
@@ -84,7 +84,7 @@ export class Employees {
     /**
      * Finds an employee by Id. If not found returns null
       */
-    public async findById(employeeId: number): Promise<Employee | null> {
+    public async findById(employeeId: number): Promise<EmployeeModel | null> {
 
         const found = this._database.get(employeeId);
         return found ? found : null;
@@ -95,7 +95,7 @@ export class Employees {
      * @param employee  employee to be save
      * @returns newly created employee with it's corresponding id set.
      */
-    public async create(employee: Employee): Promise<Employee> {
+    public async create(employee: EmployeeModel): Promise<EmployeeModel> {
 
         let id = this._database.size;
 
@@ -112,7 +112,7 @@ export class Employees {
         return employee;
     }
 
-    public async update(employee: Employee): Promise<{ result: WriteResult; employee: Employee }> {
+    public async update(employee: EmployeeModel): Promise<{ result: WriteResult; employee: EmployeeModel }> {
 
         const found = await this.findById(employee.id);
 

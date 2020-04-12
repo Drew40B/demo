@@ -1,6 +1,6 @@
 import { Employees, WriteResult } from "../dataAccess";
 import { Request, Response } from "express";
-import { Employee } from "../model";
+import { EmployeeModel } from "../model";
 
 
 export class EmployeesController {
@@ -33,7 +33,7 @@ export class EmployeesController {
 
     public async create(req: Request, res: Response) {
 
-        const employee: Employee = req.body;
+        const employee: EmployeeModel = req.body;
 
         const result = await this._employees.create(employee);
 
@@ -43,7 +43,7 @@ export class EmployeesController {
 
     public async update(req: Request, res: Response) {
       
-        const employee: Employee = req.body;
+        const employee: EmployeeModel = req.body;
 
         const result = await this._employees.update(employee);
 
