@@ -60,10 +60,11 @@ export class EmployeeValidator {
 
         if (req.method === "PUT" && parseInt(req.params.employeeId) !== parseResult.object.id) {
             const error: ErrorModel = {
-                message: `Conflict: Employeeid does not match ${req.params.employeeId} / ${parseResult.object.id} (path/body)`
+                message: `Conflict: Employeeid does not match ${req.params.employeeId} / ${parseResult.object.id} (path / body)`
 
             };
             res.status(409).json(error);
+            return;
         }
 
         req.body = parseResult.object;

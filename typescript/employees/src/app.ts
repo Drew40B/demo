@@ -25,15 +25,15 @@ export async function init() {
     const controller = new EmployeesController(employees);
     const employeeValidator = new EmployeeValidator();
 
-    const validate = employeeValidator.handle.bind(employeeValidator);
+    const validator = employeeValidator.handle.bind(employeeValidator);
 
     const baseUri = "/v1/employees/";
 
     app.get(baseUri, controller.list.bind(controller));
     app.get(baseUri + ":employeeId", controller.getById.bind(controller));
 
-    app.put(baseUri + ":employeeId", validate,controller.update.bind(controller));
-    app.post(baseUri,validate, controller.create.bind(controller));
+    app.put(baseUri + ":employeeId", validator,controller.update.bind(controller));
+    app.post(baseUri,validator,validator, controller.create.bind(controller));
 
     console.log("initialized");
 }
