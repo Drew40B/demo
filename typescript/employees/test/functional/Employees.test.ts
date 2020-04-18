@@ -1,6 +1,6 @@
 import { Employees } from "../../src/dataAccess/Employees";
 
-import { Employee } from "../../src/model";
+import { EmployeeModel } from "../../src/model";
 import { WriteResult } from "../../src/dataAccess";
 
 beforeEach(async () => {
@@ -60,13 +60,12 @@ describe("Employees", () => {
 
             const employees = await Employees.instance();
 
-            const employee: Employee = new Employee();
-             
-            employee.names = ["Unit", "Test"];
-            employee.role = "test";
-            employee.id = -1,
-            employee.supervisorId =0;
-          
+            const employee: EmployeeModel = {
+                names: ["Unit", "Test"],
+                role: "test",
+                id: -1,
+                supervisorId: 0
+            };
 
             let result = await employees.create(employee);
 

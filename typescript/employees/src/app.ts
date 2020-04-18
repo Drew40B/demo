@@ -29,6 +29,7 @@ export async function init() {
 
     const baseUri = "/v1/employees/";
 
+    // Routes 
     app.get(baseUri, controller.list.bind(controller));
     app.get(baseUri + ":employeeId", controller.getById.bind(controller));
 

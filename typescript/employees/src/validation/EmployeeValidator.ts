@@ -69,7 +69,6 @@ export class EmployeeValidator {
 
         req.body = parseResult.object;
 
-
         next();
 
     }
