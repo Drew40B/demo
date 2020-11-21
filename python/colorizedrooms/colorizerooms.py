@@ -1,24 +1,31 @@
 
-currentColor = 1
 import re
+from colors import color
 
-def determineColor(line,index,previousRow):
+currentColor = 0
+
+
+def determineColor(line,lineColors,index,previousRow):
     global currentColor
 
     char = line[index]
 
+    # If Door or whitespace then no background
     if (char == "D" or  not char.isspace()):
         return 0
 
+    # Verify not first row or first column
     if (index > 0 and len(previousRow) >= index):
 
+        # Copy the color from cell above if it is not 0
         if (previousRow[index] > 0):
             return previousRow[index]
 
-        if (line[index -1].isspace()):
-            return currentColor
+        # Copy the color from cell to the left if it is not 0
+        if (lineColors[index -1] > 0):
+            return lineColors[index -1]
 
-     
+        # We're in a new room so add 1 to the current color. IE top and left are BOTH 0
         currentColor += 1      
 
     return currentColor
@@ -27,29 +34,41 @@ def determineColor(line,index,previousRow):
 
 def processFile(fileName):
      
-    file1 = open(fileName, 'r') 
-    Lines = file1.readlines() 
+    # Open the file and read in a lines array
+    file = open(fileName, 'r') 
+    Lines = file.readlines() 
 
-    previousRow = []
     
-    # Strips the newline character 
+    previousRow = []
+        
     for line in Lines: 
         currentRow = []
+       
+        # Trim and add doors
         line = line.strip()
         lineWithDoors = re.sub("# #","#D#",line)
+
+        # loop over each character and determine the color to render
         for index in range ( len ( line )):
-            colorCode = determineColor(lineWithDoors,index,previousRow)
-            print(colorCode,end="")
-            currentRow.append(colorCode)
-          #  print(line[index],end="")
+            colorCode = determineColor(lineWithDoors,currentRow,index,previousRow)
             
-        print ("")
+             # Prints used to devleop and debug. Normally would not be in production code but left in for demo purposes
+             # print(colorCode,end="")
+             # print(line[index],end="")
+            
+            if (colorCode == 0):
+                # Don't print a backround color in case color is not black 
+                print(line[index],end="")
+            else :
+                print(color(line[index], bg= colorCode ),end="")
+
+            currentRow.append(colorCode)
+         
+        print()
 
         previousRow = currentRow
 
-        #print("Line{}: {}".format(count, line.strip())) 
-
-    print
+    print()
 
 def main():
    processFile("room.txt")
