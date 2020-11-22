@@ -1,0 +1,8 @@
+version: "3.8"
+services:
+  roomcolorizer:
+    container_name: roomcolorizer
+    build: .
+    image: roomcolorizer:latst
+    volumes:
+      - ${PWD}/src:/app
