@@ -1,6 +1,6 @@
 # Demo
 
-This is a public regository to demonstrate my skills is various langugages and technologies.
+This is a public repository to demonstrate my skills is various languages and technologies.
 
 ## Development environment / Tools
 
@@ -13,7 +13,7 @@ This is a public regository to demonstrate my skills is various langugages and t
 
 ## Technologies
 
-+ NodeJs / Typescript 
++ NodeJs / Typescript
 + .net core/ C#
 + python
 + Docker / Kubernetes (future)
@@ -22,6 +22,6 @@ This is a public regository to demonstrate my skills is various langugages and t
 
 + rootCommon : common assets to all
 + python : Python scripts to generate employees into the common folder
-+ C# : Sample RESTful microservice with unit test.
-+ typescript : RESTful microservice with unit test using NodeJs and express
++ C# : Sample RESTful micro-service with unit test
++ typescript : RESTful micro-service with unit test using NodeJs and express
   
